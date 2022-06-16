@@ -1,7 +1,7 @@
 {
   "name": "vorlesung10",
   "version": "1.0.0",
-  "description": "Man erstellt zunächst zwei Directories",
+  "description": "NodeJS mit TypeScript",
   "main": "index.js",
   "scripts": {
     "compile": "tsc"

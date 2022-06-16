@@ -98,7 +98,34 @@ Zu diesem Zweck muss in der tsconfig.json der Eintrag
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
 ```
 
-gesetzt werden. Danach kann man in Visual Studio Code den restserver.ts debuggen.
+gesetzt werden. 
+
+In Visual Studio Code muss ebenso eine Konfiguration *launch.json* für das debuggen erstellt werden. Dies erfolgt über das Menu in VSC add Configuration.
+
+```json
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/restserver.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}
+```
+
+Danach kann man in Visual Studio Code den restserver.ts debuggen.
 
 Der Test des  debug in VSC erfolgt durch Setzen eines Breakpoints und durch das Kommando
 
