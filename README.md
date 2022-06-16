@@ -100,6 +100,10 @@ Zu diesem Zweck muss in der tsconfig.json der Eintrag
 
 gesetzt werden. Danach kann man in Visual Studio Code den restserver.ts debuggen.
 
+Der Test des  debug in VSC erfolgt durch Setzen eines Breakpoints und durch das Kommando
 
+```
+$curl http://localhost:8000/service/test-b58/79jdpA
+```
 
 
